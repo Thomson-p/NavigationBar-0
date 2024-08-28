@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+*{
+    margin: 0;/*clearing default  settings*/
+    padding: 0;/*clearing default  settings*/
+    box-sizing: border-box;/*Setting the box-sizing property as border-box allows us to include the padding and border in an element's total width and height.*/
+    font-family: "Rubik", sans-serif;
+}
+
+/* Hero section */
+.hero-section{
+    height: 100vh;
+    background: url(/images/2019-koenigsegg-agera-rs1-4k-vj.jpg) center no-repeat;
+    background-size: cover;
+}
+
+/* nav */
+nav{
+    height: 70px;
+    background: rgb(20, 20, 20);
+    color: rgb(220, 220, 220);
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    
+
+}
+
+/* arranging the links nav in horizontal manner */
+
+.nav-items, .overview, .account{
+    display: flex;
+}
+.overview{
+    margin-right: 0.5rem;
+}
+
+.logo h2{
+    text-decoration: overline;
+    font-style: italic;
+    color:#016DC7 ;
+    cursor:cell;
+    margin: 0 0.5rem;
+}
+nav li{
+    list-style: none;
+    margin: 0 0.5rem;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+nav a:hover{
+    color: #016DC7;
+}
+/* the ::after enable us to add some content after any html element */
+nav a::after{
+    content: "";
+    display: block;
+    height: 1.5px;
+    background: #016DC7;
+     width: 0%; /* set the width of line to 0% before hovering*/
+    transition: all ease-in-out 1000ms;
+}
+
+/* set the width of line to 100% on hovering */
+nav a:hover::after{
+    width: 100%;
+}
+footer{
+    background-color: rgb(20, 20, 20);
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+footer p:hover{
+    color: #016DC7;
+}
+
+footer p::after{
+    content: "";
+    display: block;
+    height: 1.5px;
+    background: #016DC7;
+    width: 0%;
+    transition: all ease-in-out 1000ms;
+}
+
+footer p:hover::after{
+    width: 100%;
+}
+
+body {
+    --sb-track-color: #e3e9ef;
+    --sb-thumb-color: #016dc7;
+    --sb-size: 6px;
+  }
+  
+  body::-webkit-scrollbar {
+    width: var(--sb-size)
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 2px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 2px;
+    
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  }
